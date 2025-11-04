@@ -1,5 +1,5 @@
 '''
- This is the main module of the Emotion Detection.
+ This is the main module of the EmotionDetection package.
 '''
 import json
 import requests
