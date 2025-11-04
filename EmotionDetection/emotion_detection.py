@@ -50,11 +50,11 @@ def emotion_detector(text_to_analyse):
                 'sadness': sadness_score
             }
             dominant_emotion = max(emotions, key=emotions.get)
-        else:
-            dominant_emotion = 'unknown'
+        elif response.status_code == 400:
+            dominant_emotion = None
     except Exception as e:
         print(f"Error: {e}")
-        dominant_emotion = 'unknown'
+        dominant_emotion = None
 
     return {'anger': anger_score, 
         'disgust': disgust_score, 
